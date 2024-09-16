@@ -1,0 +1,64 @@
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Describe Email</title>
+  </head>
+  <body>
+    <form method="post">
+      <label for="user_prompt">Describe the email you want:</label>
+      <input type="text" id="user_prompt" name="user_prompt">
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+-->
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Describe Email</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Describe the Email You Want</h1>
+      <form method="post">
+        <div class="form-group">
+          <label for="user_prompt">Describe the email you want:</label>
+          <input type="text" id="user_prompt" name="user_prompt">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Describe Email</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Describe the Email You Want</h1>
+    <form method="post" id="describe-form">
+        <div class="form-group">
+            <label for="user_prompt">Describe the email you want:</label>
+            <textarea class="form-control" id="user_prompt" name="user_prompt" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+</div>
+</body>
+</html>

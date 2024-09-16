@@ -1,0 +1,72 @@
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Enter Recipient</title>
+  </head>
+  <body>
+    <form method="post" action="{{ url_for('send_email_route') }}">
+      <input type="hidden" name="email_content" value="{{ email_content }}">
+      <input type="hidden" name="subject" value="{{ subject }}">
+      <label for="recipient">Recipient:</label>
+      <input type="text" id="recipient" name="recipient">
+      <button type="submit">Send Email</button>
+    </form>
+  </body>
+</html>
+-->
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Enter Recipient</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter Recipient</h1>
+      <form method="post" action="{{ url_for('send_email_route') }}">
+        <input type="hidden" name="email_content" value="{{ email_content }}">
+        <input type="hidden" name="subject" value="{{ subject }}">
+        <div class="form-group">
+          <label for="recipient">Recipient:</label>
+          <input type="text" id="recipient" name="recipient">
+        </div>
+        <button type="submit">Send Email</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Enter Recipient</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Enter Recipient</h1>
+    <form method="post" action="{{ url_for('send_email_route') }}">
+        <input type="hidden" name="email_content" value="{{ email_content }}">
+        <input type="hidden" name="subject" value="{{ subject }}">
+        <div class="form-group">
+            <label for="recipient">Recipient:</label>
+            <input type="email" class="form-control" id="recipient" name="recipient" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Email</button>
+    </form>
+</div>
+</body>
+</html>
+

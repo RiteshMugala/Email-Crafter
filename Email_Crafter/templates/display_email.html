@@ -1,0 +1,77 @@
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Generated Email</title>
+  </head>
+  <body>
+    <p>{{ email_content }}</p>
+    <form method="post" action="{{ url_for('confirm_email') }}">
+      <input type="hidden" name="email_content" value="{{ email_content }}">
+      <button name="action" value="done" type="submit">Done</button>
+      <button name="action" value="continue" type="submit">Continue prompting</button>
+      <label for="new_prompt">New Prompt:</label>
+      <input type="text" id="new_prompt" name="new_prompt">
+    </form>
+  </body>
+</html>
+-->
+<!--
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Generated Email</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generated Email</h1>
+      <div class="email-content">{{ email_content }}</div>
+      <form method="post" action="{{ url_for('confirm_email') }}">
+        <input type="hidden" name="email_content" value="{{ email_content }}">
+        <button name="action" value="done" type="submit">Done</button>
+        <button name="action" value="continue" type="submit">Continue prompting</button>
+        <div class="form-group">
+          <label for="new_prompt">New Prompt:</label>
+          <input type="text" id="new_prompt" name="new_prompt">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Generated Email</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Generated Email</h1>
+    <div class="email-content p-3 mb-3 border rounded">
+        <pre style="white-space: pre-wrap;">{{ email_content }}</pre>
+    </div>
+    <form method="post" action="{{ url_for('confirm_email') }}">
+        <input type="hidden" name="email_content" value="{{ email_content }}">
+        <div class="text-center">
+            <button name="action" value="done" type="submit" class="btn btn-success">Done</button>
+            <button name="action" value="continue" type="submit" class="btn btn-warning">Continue prompting</button>
+        </div>
+        <div class="form-group mt-3" id="new-prompt-group" style="display:none;">
+            <label for="new_prompt">New Prompt:</label>
+            <textarea class="form-control" id="new_prompt" name="new_prompt" rows="3"></textarea>
+        </div>
+    </form>
+</div>
+</body>
+</html>
